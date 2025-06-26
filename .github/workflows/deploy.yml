@@ -16,7 +16,7 @@ jobs:
 
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Activation@v4
+        uses: Samkirkland/FTP-Deploy-Activation@v4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
