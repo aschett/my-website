@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Andreas Schett</title>
+
+  <script type="text/javascript">
+    function getMail(m, x1, x2, x3) {
+      var ca = "mailto:" + x2 + "@" + x3 + "." + x1;
+      m.href = ca;
+      return (1);
+    }
+  </script> 
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.mobile-menu');
+      menu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function (e) {
+      const menu = document.querySelector('.mobile-menu');
+      const burger = document.querySelector('.burger');
+      if (menu.classList.contains('active') && !menu.contains(e.target) && e.target !== burger) {
+        menu.classList.remove('active');
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.mobile-menu').classList.remove('active');
+        });
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="all">
+    <div class="header">
+      <h1><a href="https://andreas-l-schett.at">Andreas Schett</a></h1>
+    </div>
+
+    <hr>
+
+    <div class="menu">
+      <button class="burger" onclick="toggleMenu()">☰</button>
+      <div class="sub_menu">
+          <a href="#about me">About Me</a>
+          <a href="#education">Education</a>
+          <a href="#current interests">Interests</a>
+          <a href="#projects">Projects</a>
+          <a href="#written works">Papers</a>
+          <a href="#work">Work</a>
+          <a href="#miscallenious">Misc.</a>
+
+      </div>
+      <nav class="mobile-menu">
+          <a href="#about me">About Me</a>
+          <a href="#education">Education</a>
+          <a href="#current interests">Interests</a>
+          <a href="#projects">Projects</a>
+          <a href="#written works">Papers</a>
+          <a href="#work">Work</a>
+          <a href="#miscallenious">Misc.</a>
+
+      </nav>
+    </div>
+
+    <div class="content">
+      Welcome to my website!<br>
+      <em>contact. </em>
+        <a href="mailto:hidden"
+        onmouseenter="getMail(this,'de','a.schett','outlook');"> via mail</a>
+        <noscript>a.schett__AT__outlook.de</noscript>
+      &ensp;
+
+      <br>
+
+      <a id="about me"></a>
+      <h2>About me</h2>
+      <p>
+        Todo: Write short info about me.
+      </p>
+
+      <a id="education"></a>
+      <h2>Education</h2>
+      <ul>
+        <li>Since 2022: Bachelor Computer Science</li>
+        <li>Since 2019: Educational Studies for Computer Science and Media Education</li>
+        <li>2012 - 2018: HBLA Ferrarischule Innsbruck with Specialisation: Media</li>
+      </ul>
+
+      <a id="current interests"></a>
+      <h2>Current Interests</h2>
+      <ul>
+        <li>kubernetes</li>
+        <li>docker</li>
+        <li>golang - You can follow my learning journey <a href="https://github.com/aschett/golang_learning_repo">here</a></li>
+        <li>CI/CD pipelines</li>
+      </ul>
+
+      <a id="projects"></a>
+      <h2>Projects</h2>
+      <p>Currently we are looking into how to setup a fully automized setup of a k8s setup to host our own forgejo instance. You can follow this project <a href="https://github.com/aschett/gitops-forgejo-cluster">here</a></p>
+      <p>We are working with:</p>
+      <ul>
+        <li>k8s</li>
+        <li>docker</li>
+        <li>ansible</li>
+        <li>argocd</li>
+        <li>helm</li>
+      </ul>
+      <br>
+      <p>Past projects include:</p>
+      <ul>
+        <li>Plant Health</li>
+        <ul>
+            <li>Information here:</li>
+        </ul>
+        <li>Python based handsign-detector to control an animated airplane</li>
+        <ul>
+            <li>Information here</li>
+        </ul>
+        <li>Intelligent Traffic Control and Vehicle Recognition System</li>
+        <ul>
+          <li>Information Here</li>
+        </ul>
+      </ul>
+
+      <a id="written works"></a>
+      <h2>papers</h2>
+      <ul>
+        <li>Bachelor thesis: Fine-tuning LLMs for predicting text memorability</li>
+        <li>Term Paper: Digitale Grundbildung als Chance für eine Genderdiverse IT-Arbeitswelt (Digital Literacy as an Opportunity for a Gender-Diverse IT Industry)</li>
+      </ul>
+
+      <a id="work"></a>
+      <h2>Working Experience</h2>
+
+      <ul>
+        <li><strong>July 2019 – Innsbrucker Soziale Dienste</strong><br>
+          – Wohnungslosenhilfe, Sozialkontakt Haydnplatz<br>
+        </li>
+
+        <li><strong>2018–2019 – Innsbrucker Soziale Dienste</strong><br>
+          - Civil Service – Wohnungslosenhilfe, Sozialkontakt Haydnplatz<br>
+        </li>
+
+        <li><strong>2018 – BetaPlan Huter KG</strong><br>
+          - Stage Hand<br>
+        </li>
+      </ul>
+
+
+      <a id="miscallenious"></a>
+      <h2>Misc.</h2>
+      My hobbies include:
+      <ul>
+        <li>Reading</li>
+        <ul>
+            <li>Right now i am reading <a href="https://en.wikipedia.org/wiki/Roadside_Picnic">Roadside Picnic</a> for fun and</li>
+            <li><a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering">Site Reliability Engineering: How Google Runs Production Systems</a> for personal learnings</li>
+            <li>For a few recommendations you can look at my <a href="https://www.goodreads.com/list/show/228720.Andreas_Schett_Recommendations">goodreads</a> recommendation list</li>
+        </ul>
+        <li>Going to the gym</li>
+        <li>Cooking</li>
+      </ul>
+
+
+      <br>
+      View my profile on <a href="https://www.linkedin.com/in/andreas-schett-0846202b3/">LinkedIn</a> or <a href="https://github.com/aschett">github</a>.
+    </div>
+
+    <div class="bottom"></div>
+  </div>
+</body>
+
+</html>
